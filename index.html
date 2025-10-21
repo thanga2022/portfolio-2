@@ -79,7 +79,11 @@
     </section>
   </main>
 
-  <script src="script.js"></script>
+  <script src="script.js">
+    if (window.location.protocol !== "https:") {
+    window.location.href = "https://" + window.location.hostname + window.location.pathname + window.location.search;
+  }
+  </script>
 </body>
 
 </html>
