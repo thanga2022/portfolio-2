@@ -10,4 +10,11 @@ document.addEventListener('click', function(e){
   }
 });
 
+// Set footer year
+(function(){
+  const y = new Date().getFullYear();
+  const el = document.getElementById('year');
+  if(el) el.textContent = y;
+})();
+
 
