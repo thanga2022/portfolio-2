@@ -189,9 +189,7 @@ body {
   border-radius: 6px;
   box-shadow: 0 4px 15px rgba(38, 197, 243, 0.2);
   width: 500px;
-  px;
   height: 200px;
-  px
 }
 
 .quote-mark {
@@ -279,6 +277,136 @@ body {
 
 #work {
   display: none;
+}
+
+.section.container h2 {
+  color: #FF7237;
+}
+
+/* My WORKS section styles */
+.works-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: 18px;
+}
+
+
+.work-item {
+  width: 100%;
+  scroll-snap-align: start;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.04);
+  padding: 18px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+  align-items: stretch;
+}
+
+.work-link {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.work-link:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(38,197,243,0.08);
+}
+
+.work-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 40px rgba(38,197,243,0.06);
+}
+
+.work-thumb {
+  flex: 0 0 280px; /* fixed thumbnail column */
+  width: 280px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  background: rgba(0,0,0,0.18);
+  border: 1px solid rgba(255,255,255,0.02);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  align-self: stretch;
+}
+
+.work-thumb:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 24px rgba(38,197,243,0.1);
+}
+
+.work-content {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+  flex-grow: 1;
+}
+
+.work-content h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #ffffff;
+  line-height: 1.3;
+  flex: 0 0 180px; /* fixed-ish column for title */
+}
+
+.work-content p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.5;
+  flex: 1 1 auto; /* description takes remaining space */
+}
+
+@media (max-width: 600px) {
+  .work-content {
+    flex-direction: column;
+  }
+  .work-content h3 {
+    flex: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .work-item {
+    flex: 0 0 350px;
+  }
+}
+
+@media (max-width: 600px) {
+  .work-item {
+    flex: 0 0 300px;
+  }
+  .works-grid {
+    gap: 20px;
+    padding: 15px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .work-item {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .work-thumb {
+    width: 100%;
+    height: 220px;
+    flex: none;
+  }
+  .work-content {
+    flex-direction: column;
+    width: 100%;
+  }
 }
 
 /* Responsive Design */
