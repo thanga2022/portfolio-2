@@ -340,6 +340,9 @@ body {
 }
 
 /* My WORKS section styles */
+#my-works {
+  margin-top: 118px;
+}
 .works-grid {
   display: flex;
   flex-direction: column;
