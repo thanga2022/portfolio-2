@@ -68,12 +68,12 @@ body {
 
 .nav {
   display: flex;
-  align-items: center
+  align-items: center;
+  gap: 18px;
 }
 
 .nav a {
   color: var(--muted);
-  margin-left: 18px;
   text-decoration: none;
   display: inline-flex;
   align-items: center
@@ -90,10 +90,6 @@ body {
 
 .nav a:first-of-type:hover {
   color: #26C5F3
-}
-
-.nav a:last-of-type {
-  margin-left: 40px
 }
 
 .nav-icon {
